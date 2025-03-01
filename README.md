@@ -1,4 +1,4 @@
-# puff_lukelukeluke
+# interfaced vaping system
 an easy replacement self vaping machine based on a vaporeso gtx 80 
 special commission for @lukelukeluke sculptural piece at Larry's exhibition 13.03.25
 
