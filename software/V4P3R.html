@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ULTR4V1P3R CONTROLER</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script>
+            function getCookie(name) {
+                var value = "; " + document.cookie;
+                var parts = value.split("; " + name + "=");
+                if (parts.length == 2)
+                    return parts.pop().split(";").shift();
+            }
+            function showMessage() {
+                document.getElementById('message').innerHTML = getCookie('message');
+            }
+            function onLoad() {
+                showMessage();
+                var form = getCookie('form');
+                if (form) {
+                    form = form.split(',')
+                    document.getElementById('vaping_time').selectedIndex = parseInt(form[0]-1);
+                    document.getElementById('chilling_time').selectedIndex = parseInt(form[1]/30-1);
+                }
+            }
+        </script>
+    </head>
+    <body onload="onLoad();">
+        <div class="container">
+            <h1>V4P3R C0N7RL</h1>
+            <div class="alert alert-primary" role="alert" id="message">
+            </div>
+            <form method="POST" action="">
+                <p>
+                    VAPING TIME:
+                    <select name="vaping_time" id="vaping_time">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                    
+                    CHILLING TIME:
+                    <select name="chilling_time" id="chilling_time">
+                        <option>30</option>
+                        <option>60</option>
+                        <option>90</option>
+                    </select>
+                </p>
+                <div>
+                    <p>
+                        <input type="radio" name="mode" value="random_selection" id="random_selection">
+                        <label for="pullup">Random selection</label>&nbsp;&nbsp;        
+                        <input type="radio" name="mode" value="random_fluctuation" id="random_fluctuation">
+                        <label for="pullup">Random fluctuation</label>&nbsp;&nbsp;
+                        <input type="radio" name="mode" value="fixed" id="fixed" checked>
+                        <label for="pullnone">No fluctuation</label>
+                        <br>
+                        <input type="submit" class="btn btn-outline-dark" name="set" value="SET">
+                    </p>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
