@@ -2,7 +2,11 @@
 an easy replacement self vaping machine based on a vaporeso gtx 80 
 special commission for @lukelukeluke sculptural piece at Larry's exhibition 13.03.25
 
-# BOM 
+## interface
+the device create a local wifi acces point that allow you to change 
+the variable values and mode of vaping
+
+## BOM 
 - vaporesso GTX GO 80
 - GTX 0,8ohm resitor (5pack)
 - DC 6V air pump
